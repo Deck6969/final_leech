@@ -782,65 +782,61 @@ def set_priority(id_):
 @app.route('/')
 def homepage():
     return """
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful HTML Page</title>
     <style>
         body {
-            background-color: #0D1117;
-            color: white;
-            font-family: "Ubuntu", sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .header {
-            background-color: black;
+        .container {
             text-align: center;
-            width: 100%;
-            padding: 1px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            margin: auto;
         }
-        .footer {
-            background-color: black;
-            padding: 10px;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        h1 {
+            color: #333333;
         }
-        .content {
-            padding: 20px;
-            text-align: center;
+        p {
+            color: #666666;
+            line-height: 1.6;
         }
-        .button {
-            background-color: #0001f0;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
-        .image {
-            border-radius: 12px;
-            max-width: 100%;
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>WZML-X</h1>
-    </div>
-    <div class="content">
-        <img src="https://graph.org/file/639fe4239b78e5862b302.jpg" class="image">
-        <a href="https://telegram.me/WZML_X" style="text-decoration: none;">
-            <button class="button">Join Updates Channel Now</button>
-        </a>
-    </div>
-    <div class="footer">
-© 2022-23 WZML-X. All Rights Reserved.
+    <div class="container">
+        <h1>Welcome to My Beautiful HTML Page</h1>
+        <p>This is a simple example of a beautiful HTML page.</p>
+        <p>Feel free to <a href="https://www.example.com">explore</a>!</p>
     </div>
 </body>
 </html>
